@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden w-screen bg-black" style="font-family: 'Roboto';">
+    <!-- nav -->
+    <section>
+        <!-- background -->
+        <div class="bg-[url(images/bg.jpg)] bg-no-repeat bg-center bg-cover h-[70vh] sm:h-screen max-w-lvw">
+        </div>
+        <!-- shadow -->
+        <div class="bg-black/80 h-[70vh] sm:h-screen w-screen absolute top-0 z-0 pointer-events-none">
+        </div>
+        <!-- nav -->
+        <div class="absolute top-0 w-full h-[14%] flex justify-center z-10 ">
+            <div class="w-[80%] h-full flex justify-between items-center">
+                <div><img src="images/logo.svg" alt="netflix_logo " width="140" class=""></div>
+                <div class="flex gap-3">
+                    <div>
+                        <select name="" id=""
+                            class="bg-black text-white px-3 py-1 text-center font-semibold h-[32px] w-[124px] text-[16px] rounded-sm mr-2 ring-1 ring-gray-500">
+                            <option value="option1">English</option>
+                            <option value="option2">Hindi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="bg-red-600 text-white px-3 py-1.5 w-[77px] h-[32px] text-[14px] font-[500] rounded-sm  hover:bg-red-800 transition duration-500">Sign
+                            In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- get started section -->
+    <section class="flex justify-center">
+        <div class=" w-full sm:w-[95%] h-[86%] z-20 absolute top-[14%] flex justify-center">
+            <div
+                class="w-[95%] sm:w-[45%] h-[70%] flex items-center justify-center border-dotted relative top-[5%] sm:top-[12%]">
+                <div class="flex flex-col justify-center ">
+                    <p class="text-white text-center text-3xl font-bold sm:text-[56px] sm:font-black mb-4">Unlimited
+                        movies,
+                        TV <br> shows and more</p>
+                    <p class="text-white text-center text-sm font-normal sm:text-xl sm:font-bold mb-8">
+                        Starts at ₹149. Cancel at any time.
+                    </p>
+                    <form action="" class="text-center">
+                        <label for="" class="text-white">Ready to watch?Enter your email to create or restart your
+                            membership.</label>
+                        <div class="flex flex-col sm:flex-row justify-center items-center gap-2 w-full text-white mt-4">
+                            <input type="email" placeholder="Email address"
+                                class="bg-black/60 px-4 focus:border-none h-12 w-full max-w-[400px] ring-1 ring-gray-500 rounded-sm">
+
+                            <button type="submit"
+                                class="bg-red-600 rounded-sm text-2xl font-[500] h-12 w-32 sm:w-70 hover:bg-red-800 transition duration-500 text-nowrap">Get
+                                Started  ></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- trending section -->
+    <section class="w-full flex justify-center">
+        <div class="w-[80%] px-4 py-8">
+            <h2 class="text-xl font-bold mb-4 text-white">Trending Now</h2>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.pexels.com/photos/18946605/pexels-photo-18946605.jpeg"
+                            class="rounded-md" />
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- reasons to join section -->
+    <section class="bg-black text-white py-12 w-full flex justify-center">
+        <div class="w-[80%] px-4 py-8">
+            <h2 class="text-xl font-bold mb-4 text-white">Reasons to Join</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-6 w-[100%]">
+            <div class="bg-blue-950 h-[100%]">
+                <h3 class="font-bold text-lg mb-2">Enjoy on your TV</h3>
+                <p class="text-sm text-gray-300">Watch on smart TVs, PlayStation, Xbox...</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2">Download your shows</h3>
+                <p class="text-sm text-gray-300">Save favorites easily to watch offline.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2">Watch everywhere</h3>
+                <p class="text-sm text-gray-300">Stream on phone, tablet, laptop & TV.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2">Create profiles for kids</h3>
+                <p class="text-sm text-gray-300">Send kids on adventures with their favorite characters.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="bg-black text-white py-12 w-full ">
+        <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <div class="max-w-4xl mx-auto space-y-4">
+            <details class="bg-gray-800 p-4 rounded">
+                <summary class="cursor-pointer text-lg font-medium">What is Netflix?</summary>
+                <p class="mt-2 text-sm text-gray-300">Netflix is a streaming service that offers...</p>
+            </details>
+            <details class="bg-gray-800 p-4 rounded">
+                <summary class="cursor-pointer text-lg font-medium">How much does Netflix cost?</summary>
+                <p class="mt-2 text-sm text-gray-300">Plans start at ₹149/month...</p>
+            </details>
+            <!-- Add more FAQ items -->
+        </div>
+    </section>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
