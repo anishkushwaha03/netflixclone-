@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix India - Watch TV Shows Online</title>
+  <link rel="stylesheet" href="output.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #000;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.75) 55%, rgba(0, 0, 0, 0.95) 100%);
+    }
+
+    .curve-divider {
+      border-top: 3px solid #e61e79;
+      border-radius: 80% 80% 0 0 / 80px 80px 0 0;
+      background: radial-gradient(120% 65% at 50% -5%, #182968 0%, #050505 48%, #000 100%);
+    }
+
+    .poster-number {
+      -webkit-text-stroke: 2px #9ca3af;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden bg-black text-white">
+  <header class="relative min-h-[82vh] border-b-8 border-zinc-900">
+    <div class="absolute inset-0 bg-[url(images/bg.jpg)] bg-cover bg-center"></div>
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <nav class="relative z-10 mx-auto flex w-[92%] max-w-6xl items-center justify-between py-6">
+      <img src="images/logo.svg" alt="Netflix logo" class="w-28 sm:w-36" />
+      <div class="flex items-center gap-3">
+        <select class="h-8 rounded border border-zinc-500 bg-black/60 px-3 text-sm">
+          <option>English</option>
+          <option>Hindi</option>
+        </select>
+        <button class="h-8 rounded bg-red-600 px-4 text-sm font-medium hover:bg-red-700">Sign In</button>
+      </div>
+    </nav>
+
+    <section class="relative z-10 mx-auto flex min-h-[64vh] w-[92%] max-w-5xl flex-col items-center justify-center text-center">
+      <h1 class="text-3xl font-extrabold leading-tight sm:text-5xl md:text-6xl">Unlimited movies, TV shows and more</h1>
+      <p class="mt-4 text-lg sm:text-2xl">Starts at ₹149. Cancel at any time.</p>
+      <p class="mt-6 max-w-2xl text-base sm:text-lg">Ready to watch? Enter your email to create or restart your membership.</p>
+      <form class="mt-4 flex w-full max-w-2xl flex-col gap-3 sm:flex-row">
+        <input type="email" placeholder="Email address" class="h-14 w-full rounded border border-zinc-500 bg-black/50 px-4 placeholder:text-zinc-300 focus:outline-none" />
+        <button class="h-14 whitespace-nowrap rounded bg-red-600 px-8 text-xl font-medium hover:bg-red-700">Get Started &gt;</button>
+      </form>
+    </section>
+  </header>
+
+  <div class="curve-divider h-24 w-full"></div>
+
+  <main class="pb-16">
+    <section class="mx-auto w-[92%] max-w-6xl pt-2">
+      <h2 class="mb-6 text-4xl font-bold sm:text-5xl">Trending Now</h2>
+      <div class="relative">
+        <button id="trend-prev" aria-label="Previous"
+          class="absolute left-2 top-1/2 z-20 hidden h-24 w-10 -translate-y-1/2 rounded bg-zinc-800/80 text-4xl text-zinc-300 md:block">‹</button>
+
+        <div id="trend-track" class="hide-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-12 py-2">
+          <article class="relative h-72 min-w-[180px] snap-start overflow-visible rounded-xl bg-zinc-800 sm:min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80" alt="Trending 1" class="h-full w-full rounded-xl object-cover" />
+            <span class="poster-number absolute -bottom-2 -left-5 text-8xl font-black text-black">1</span>
+          </article>
+          <article class="relative h-72 min-w-[180px] snap-start overflow-visible rounded-xl bg-zinc-800 sm:min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=600&q=80" alt="Trending 2" class="h-full w-full rounded-xl object-cover" />
+            <span class="poster-number absolute -bottom-2 -left-5 text-8xl font-black text-black">2</span>
+          </article>
+          <article class="relative h-72 min-w-[180px] snap-start overflow-visible rounded-xl bg-zinc-800 sm:min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80" alt="Trending 3" class="h-full w-full rounded-xl object-cover" />
+            <span class="poster-number absolute -bottom-2 -left-5 text-8xl font-black text-black">3</span>
+          </article>
+          <article class="relative h-72 min-w-[180px] snap-start overflow-visible rounded-xl bg-zinc-800 sm:min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=600&q=80" alt="Trending 4" class="h-full w-full rounded-xl object-cover" />
+            <span class="poster-number absolute -bottom-2 -left-5 text-8xl font-black text-black">4</span>
+          </article>
+          <article class="relative h-72 min-w-[180px] snap-start overflow-visible rounded-xl bg-zinc-800 sm:min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=600&q=80" alt="Trending 5" class="h-full w-full rounded-xl object-cover" />
+            <span class="poster-number absolute -bottom-2 -left-5 text-8xl font-black text-black">5</span>
+          </article>
+          <article class="relative h-72 min-w-[180px] snap-start overflow-visible rounded-xl bg-zinc-800 sm:min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="Trending 6" class="h-full w-full rounded-xl object-cover" />
+            <span class="poster-number absolute -bottom-2 -left-5 text-8xl font-black text-black">6</span>
+          </article>
+        </div>
+
+        <button id="trend-next" aria-label="Next"
+          class="absolute right-2 top-1/2 z-20 hidden h-24 w-10 -translate-y-1/2 rounded bg-zinc-800/80 text-4xl text-zinc-300 md:block">›</button>
+      </div>
+    </section>
+
+    <section class="mx-auto w-[92%] max-w-6xl pt-20">
+      <h2 class="mb-6 text-4xl font-bold sm:text-5xl">More reasons to join</h2>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <article class="flex min-h-72 flex-col rounded-3xl bg-gradient-to-b from-indigo-900 to-purple-950 p-6">
+          <h3 class="text-4xl font-bold leading-tight">Enjoy on your TV</h3>
+          <p class="mt-4 text-2xl text-zinc-300">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+          <span class="mt-auto text-right text-6xl">🖥️</span>
+        </article>
+        <article class="flex min-h-72 flex-col rounded-3xl bg-gradient-to-b from-indigo-900 to-purple-950 p-6">
+          <h3 class="text-4xl font-bold leading-tight">Download your shows to watch offline</h3>
+          <p class="mt-4 text-2xl text-zinc-300">Save your favourites easily and always have something to watch.</p>
+          <span class="mt-auto text-right text-6xl">⬇️</span>
+        </article>
+        <article class="flex min-h-72 flex-col rounded-3xl bg-gradient-to-b from-indigo-900 to-purple-950 p-6">
+          <h3 class="text-4xl font-bold leading-tight">Watch everywhere</h3>
+          <p class="mt-4 text-2xl text-zinc-300">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+          <span class="mt-auto text-right text-6xl">🎬</span>
+        </article>
+        <article class="flex min-h-72 flex-col rounded-3xl bg-gradient-to-b from-indigo-900 to-purple-950 p-6">
+          <h3 class="text-4xl font-bold leading-tight">Create profiles for kids</h3>
+          <p class="mt-4 text-2xl text-zinc-300">Send kids on adventures with their favourite characters in a space made just for them.</p>
+          <span class="mt-auto text-right text-6xl">🙂</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto w-[92%] max-w-6xl pt-20">
+      <h2 class="mb-6 text-4xl font-bold sm:text-5xl">Frequently Asked Questions</h2>
+      <div class="space-y-2">
+        <article class="faq-item bg-zinc-800">
+          <button class="faq-trigger flex w-full items-center justify-between px-8 py-7 text-left hover:bg-zinc-700">
+            <span class="text-4xl">What is Netflix?</span>
+            <span class="faq-icon text-6xl font-light">+</span>
+          </button>
+          <div class="faq-content hidden border-t border-black/50 px-8 py-7 text-2xl text-zinc-200">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime and more.</div>
+        </article>
+        <article class="faq-item bg-zinc-800">
+          <button class="faq-trigger flex w-full items-center justify-between px-8 py-7 text-left hover:bg-zinc-700">
+            <span class="text-4xl">How much does Netflix cost?</span>
+            <span class="faq-icon text-6xl font-light">+</span>
+          </button>
+          <div class="faq-content hidden border-t border-black/50 px-8 py-7 text-2xl text-zinc-200">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device for one fixed monthly fee.</div>
+        </article>
+        <article class="faq-item bg-zinc-800">
+          <button class="faq-trigger flex w-full items-center justify-between px-8 py-7 text-left hover:bg-zinc-700">
+            <span class="text-4xl">Where can I watch?</span>
+            <span class="faq-icon text-6xl font-light">+</span>
+          </button>
+          <div class="faq-content hidden border-t border-black/50 px-8 py-7 text-2xl text-zinc-200">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web.</div>
+        </article>
+        <article class="faq-item bg-zinc-800">
+          <button class="faq-trigger flex w-full items-center justify-between px-8 py-7 text-left hover:bg-zinc-700">
+            <span class="text-4xl">How do I cancel?</span>
+            <span class="faq-icon text-6xl font-light">+</span>
+          </button>
+          <div class="faq-content hidden border-t border-black/50 px-8 py-7 text-2xl text-zinc-200">Netflix is flexible. There are no contracts and you can easily cancel your account online anytime.</div>
+        </article>
+        <article class="faq-item bg-zinc-800">
+          <button class="faq-trigger flex w-full items-center justify-between px-8 py-7 text-left hover:bg-zinc-700">
+            <span class="text-4xl">What can I watch on Netflix?</span>
+            <span class="faq-icon text-6xl font-light">+</span>
+          </button>
+          <div class="faq-content hidden border-t border-black/50 px-8 py-7 text-2xl text-zinc-200">Netflix has an extensive library of feature films, documentaries, TV shows, anime, and originals.</div>
+        </article>
+        <article class="faq-item bg-zinc-800">
+          <button class="faq-trigger flex w-full items-center justify-between px-8 py-7 text-left hover:bg-zinc-700">
+            <span class="text-4xl">Is Netflix good for kids?</span>
+            <span class="faq-icon text-6xl font-light">+</span>
+          </button>
+          <div class="faq-content hidden border-t border-black/50 px-8 py-7 text-2xl text-zinc-200">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly content.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const track = document.getElementById('trend-track');
+    const prev = document.getElementById('trend-prev');
+    const next = document.getElementById('trend-next');
+
+    const scrollAmount = () => Math.max(track.clientWidth * 0.8, 280);
+    prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      const trigger = item.querySelector('.faq-trigger');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        document.querySelectorAll('.faq-content').forEach((panel) => panel.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach((i) => (i.textContent = '+'));
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.textContent = '×';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
